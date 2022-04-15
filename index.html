@@ -11,16 +11,16 @@
       href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Roboto&display=swap"
       rel="stylesheet"
     />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
     <title>Ecommerse Academlo</title>
   </head>
   <body>
     <header>
       <!-- ---------------------- NABVAR ---------------------- -->
-      <nav>
-        <ul>
-          <li>
-            <a href="">STORE</a>
-          </li>
+      <nav class="navbar-menu">
+        <ul class="nav-options">
+          <label class="logo">STORE</label>
           <li>
             <a href="#home">Home</a>
           </li>
@@ -35,8 +35,35 @@
           /></label>
 
           <input type="checkbox" id="check-shopping" />
-          <label for="check-shopping" class="checkbtn"
+          <label for="check-shopping" class="lbl-modal"
             ><img src="/Ecommerse/assets/image/bolsa-de-la-compra.svg" alt=""
+          /></label>
+
+          <!-- ---------------------- MODAL ---------------------- -->
+
+          <div class="modal">
+            <div class="contenedor">
+              <header>
+                <h2>My Cart</h2>
+                <label for="check-shopping">X</label>
+
+                <div class="contenido">
+                  <img src="/Ecommerse/assets/image/empty-cart.png" alt="" />
+                  <h2>Your cart is empty</h2>
+                  <p>
+                    You can add items to your cart by clicking on the "+" button
+                    on the product page.
+                  </p>
+                </div>
+              </header>
+            </div>
+          </div>
+          <input type="checkbox" id="check-menu" />
+          <label for="check-menu" class="checkbtn"
+            ><img
+              src="/Ecommerse/assets/image/cuadricula.svg"
+              alt=""
+              class="icon-menu"
           /></label>
         </div>
       </nav>
@@ -151,6 +178,7 @@
               Copy Right
             </p>
           </div>
+
           <div class="txt">
             <h3>Product</h3>
             <p>
@@ -163,8 +191,11 @@
           </div>
           <div class="txt">
             <h3>Social</h3>
-            <p>iconos</p>
-            <img src="" alt="" />
+            <div class="redes">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-instagram"></i>
+            </div>
           </div>
         </div>
         <div class="rigths-reserved">
