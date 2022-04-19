@@ -19,8 +19,8 @@
     <header>
       <!-- ---------------------- NABVAR ---------------------- -->
       <nav class="navbar-menu">
+        <label class="logo">STORE</label>
         <ul class="nav-options">
-          <label class="logo">STORE</label>
           <li>
             <a href="#home">Home</a>
           </li>
@@ -29,25 +29,37 @@
           </li>
         </ul>
         <div class="icons-nav">
-          <input type="checkbox" id="check-moon" />
-          <label for="check-moon" class="checkbtn"
-            ><img src="/Ecommerse/assets/image/luna.svg" alt=""
-          /></label>
+          <input
+            type="checkbox"
+            id="check-moon"
+            onclick="document.documentElement.classList.toggle('dark-mode')"
+          />
+          <label for="check-moon" class="light-mode-button"
+            ><img src="/Ecommerse/assets/image/sol.svg" alt="" />
+          </label>
+
+          <label for="check-moon" class="dark-mode-button"
+            ><img src="/Ecommerse/assets/image/luna.svg" alt="" />
+          </label>
 
           <input type="checkbox" id="check-shopping" />
-          <label for="check-shopping" class="lbl-modal"
+          <label for="check-shopping" class="modal-button"
             ><img src="/Ecommerse/assets/image/bolsa-de-la-compra.svg" alt=""
           /></label>
 
-          <!-- ---------------------- MODAL ---------------------- -->
+          <input type="checkbox" id="check-menu" />
+          <label for="check-menu" class="menu-button"
+            ><img src="/Ecommerse/assets/image/cuadricula.svg" alt=""
+          /></label>
 
+          <!-- ---------------------- MODAL ---------------------- -->
           <div class="modal">
             <div class="contenedor">
               <header>
                 <h2>My Cart</h2>
                 <label for="check-shopping">X</label>
 
-                <div class="contenido">
+                <div class="content-modal">
                   <img src="/Ecommerse/assets/image/empty-cart.png" alt="" />
                   <h2>Your cart is empty</h2>
                   <p>
@@ -58,19 +70,12 @@
               </header>
             </div>
           </div>
-          <input type="checkbox" id="check-menu" />
-          <label for="check-menu" class="checkbtn"
-            ><img
-              src="/Ecommerse/assets/image/cuadricula.svg"
-              alt=""
-              class="icon-menu"
-          /></label>
         </div>
       </nav>
     </header>
 
+    <!-- ---------------------- SECTION HOME ---------------------- -->
     <main>
-      <!-- ---------------------- SECTION HOME ---------------------- -->
       <section id="home">
         <div class="text-home">
           <h1>
@@ -97,22 +102,29 @@
       </section>
       <!-- ---------------------- SECTION PRODUCTS ---------------------- -->
       <section id="products">
+        <!-- ---------------------- HEADER PRODUCTS ---------------------- -->
         <div class="header-products">
           <div class="title-products">
             <h2>Show All</h2>
             <p>show all products</p>
           </div>
+
           <div class="line"></div>
+
           <div class="title-products">
             <h2>Hoodies</h2>
             <p>3 products</p>
           </div>
+
           <div class="line"></div>
+
           <div class="title-products">
             <h2>Shirts</h2>
             <p>4 products</p>
           </div>
+
           <div class="line"></div>
+
           <div class="title-products">
             <h2>Sweatshirts</h2>
             <p>4 products</p>
@@ -120,7 +132,8 @@
         </div>
 
         <div class="content-target">
-          <div class="target">
+          <!-- ---------------------- TARGETS PRODUCTS ---------------------- -->
+          <div class="target" id="Hoodies">
             <img src="/Ecommerse/assets/image/featured1.png" alt="" />
 
             <div class="data-target">
@@ -131,7 +144,7 @@
               <h2>Hoodies</h2>
             </div>
           </div>
-          <div class="target">
+          <div class="target" id="Shirts">
             <img src="/Ecommerse/assets/image/featured2.png" alt="" />
 
             <div class="data-target">
@@ -142,7 +155,7 @@
               <h2>Shirts</h2>
             </div>
           </div>
-          <div class="target">
+          <div class="target" id="Sweatshirts">
             <img src="/Ecommerse/assets/image/featured3.png" alt="" />
 
             <div class="data-target">
@@ -192,16 +205,30 @@
           <div class="txt">
             <h3>Social</h3>
             <div class="redes">
-              <i class="fa-brands fa-facebook-f"></i>
-              <i class="fa-brands fa-twitter"></i>
-              <i class="fa-brands fa-instagram"></i>
+              <a href="https://www.facebook.com/" target="_blank">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+
+              <a href="https://twitter.com/" target="_blank">
+                <i class="fa-brands fa-twitter"> </i>
+              </a>
+              <a href="https://www.instagram.com/" target="_blank">
+                <i class="fa-brands fa-instagram"> </i>
+              </a>
             </div>
           </div>
         </div>
+        <div class="line-footer"></div>
         <div class="rigths-reserved">
           <p>© ACADEMLO. All rigths reserved</p>
         </div>
       </section>
     </footer>
+
+    <script
+      src="https://kit.fontawesome.com/828f87dd8e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/Ecommerse/index.js"></script>
   </body>
 </html>

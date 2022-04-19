@@ -10,30 +10,39 @@ html {
   box-sizing: border-box;
 }
 
-ul {
+/* ---------------------- STYLE SECTION NABVAR ---------------------- */
+.navbar-menu {
+  background-color: transparent;
   display: flex;
-  margin-right: 18rem;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: 0.7s;
+  border: 1px solid black;
 }
 
-.icons-nav {
-  display: flex;
-  margin-left: 27rem;
-}
+
 
 nav {
   position: relative;
   z-index: 1;
 }
 
-.navbar-menu {
+.navbar-menu ul {
   display: flex;
-  justify-content: center;
-  padding: 1rem;
-  flex-wrap: wrap;
-  background-color: transparent;
-  width: 100%;
-  position: fixed;
-  align-items: center;
+  margin-right: 18rem;
+  /* border: 1px solid black; */
+  margin-left: 2rem;
+}
+
+.icons-nav {
+  margin-left: 27rem;
+  display: flex;
+  /* border: 1px solid black; */
 }
 
 .logo {
@@ -44,53 +53,75 @@ nav {
 }
 
 .nav-options li {
+  /* border: 1px solid black; */
   list-style: none;
+  margin: 0 1rem;
 }
 
 .nav-options li a {
   text-decoration: none;
   color: black;
-  padding: 1rem 2rem;
-  font-size: 18px;
+  font-size: 20px;
+  padding: 5px 10px;
   position: relative;
-  left: 3rem;
+  flex-wrap: wrap;
+  border-radius: 3px;
+
+  transition: 0.7s;
 }
 
-a:focus,
-a:hover {
-  color: rgb(210, 102, 102);
+.nav-options a:hover,
+.nav-options a:focus {
+  background-color: #ff4f4f;
   transition: 0.5s;
 }
 
 #check-moon,
 #check-shopping,
-#check-menu,
-#check-cruz {
+#check-menu {
   display: none;
 }
 
-.checkbtn {
+.modal-button,
+.dark-mode-button,
+.menu-button,
+.light-mode-button {
   cursor: pointer;
 }
 
-.lbl-modal {
-  cursor: pointer;
+html.dark-mode {
+  filter: invert(100%);
 }
 
-.icon-cruz,
-.icon-menu {
+html.dark-mode img {
+  filter: invert(100%);
+}
+
+#check-moon:checked ~ .dark-mode-button {
   display: none;
 }
 
-.icons-nav label i {
-  color: black;
+.light-mode-button {
+  display: none;
 }
 
+#check-moon:checked ~ .light-mode-button {
+  display: block;
+}
+
+.menu-button {
+  display: none;
+}
+
+/* tamaño de iconos */
 .icons-nav img {
   width: 18px;
-  margin-left: 1rem;
+  margin: 0 0.5rem;
+  flex-wrap: wrap;
+  /* border: 1px solid black; */
 }
 
+/* ventana de compras */
 .modal {
   position: fixed;
   top: 0;
@@ -102,14 +133,13 @@ a:hover {
 
 .modal img {
   width: 350px;
-  /* border: 1px solid black; */
 }
 
-.contenido {
+.content-modal {
   margin-top: 2rem;
 }
 
-.contenido p {
+.content-modal p {
   color: gray;
 }
 
@@ -119,7 +149,8 @@ a:hover {
 }
 
 .contenedor {
-  width: 405px;
+  /* width: 405px; */
+  width: 100%;
   height: 100vh;
   margin: auto;
   transition: all 300ms ease;
@@ -149,8 +180,9 @@ a:hover {
   cursor: pointer;
 }
 
+/* ---------------------- STYLE SECTION HOME ---------------------- */
+
 #home {
-  /* background-color: khaki; */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -159,14 +191,12 @@ a:hover {
 .text-home {
   padding-right: 14rem;
   padding-top: 8rem;
-  /* border: 1px solid black; */
 }
 
 .text-home h1 {
   font-size: 35px;
   font-weight: bold;
   margin: 3rem 1rem 2rem 1rem;
-  /* border: 1px solid black; */
 }
 .text-home p {
   color: gray;
@@ -175,15 +205,13 @@ a:hover {
 }
 
 .text-home span {
-  color: rgb(210, 102, 102);
+  color: #ff4f4f;
   font-size: 25px;
-  /* border: 1px solid black; */
 }
 
 .buttons-home {
   margin-top: 3rem;
   margin-bottom: 1rem;
-  /* border: 1px solid black; */
 }
 
 .buttons-home button {
@@ -205,6 +233,12 @@ a:hover {
   padding-top: 8rem;
 }
 
+.buttons-home button:hover,
+button:focus {
+  background-color: #ff4f4f;
+  transition: 0.5s;
+}
+
 /* ---------------------- STYLE SECTION PRODUCTS ---------------------- */
 
 #products {
@@ -215,15 +249,16 @@ a:hover {
 #products .header-products {
   display: flex;
   justify-content: center;
-  /* border: 1px solid black; */
   margin-left: 5rem;
   flex-wrap: wrap;
+  /* border: 1px solid black; */
+  width: 90%;
 }
 
 #products .title-products {
   width: 15rem;
-  /* border: 1px solid black; */
   margin: 1rem;
+  /* border: 1px solid black; */
 }
 
 #products .header-products h2 {
@@ -240,6 +275,7 @@ a:hover {
 }
 
 #products .line {
+  margin-top: 1rem;
   width: 0.5px;
   height: 60px;
   border: 1px solid rgb(180, 177, 177);
@@ -248,13 +284,11 @@ a:hover {
 #products .content-target {
   display: flex;
   justify-content: center;
-  /* border: 1px solid black; */
   margin-top: 3rem;
   flex-wrap: wrap;
 }
 
 #products .target {
-  /* border: 1px solid black; */
   margin-left: 5rem;
   margin-bottom: 1rem;
 }
@@ -296,7 +330,7 @@ a:hover {
   /* border: 1px solid black; */
 }
 
-/* ---------------------- STYLE FOOTER ---------------------- */
+/* ---------------------- STYLE SECTION FOOTER ---------------------- */
 
 #footer {
   background-color: rgb(228, 225, 225);
@@ -326,14 +360,20 @@ a:hover {
   color: gray;
 }
 
+.line-footer {
+  width: 90%;
+  height: 1px;
+  border: 1px solid rgb(249, 244, 244);
+  margin: 3rem 5rem;
+}
+
 #footer .rigths-reserved p {
-  padding-top: 4rem;
   text-align: center;
   font-size: 13px;
+  /* border: 1px solid black; */
 }
 
 #footer .redes {
-  color: gray;
   /* border: 1px solid black; */
   margin-top: 2rem;
   display: flex;
@@ -341,12 +381,48 @@ a:hover {
   justify-content: space-between;
 }
 
+#footer .redes a {
+  color: gray;
+}
+
 @media (max-width: 600px) {
-  .text-home {
-    padding-left: 15rem;
+  /* .menu-button {
+    display: block;
   }
 
-  .text-home h1 {
-    font-size: 30px;
+  .navbar-menu ul {
+    position: fixed;
+    width: 100%;
+    margin-left: 0;
+    flex-direction: column;
+    margin-top: 40px;
+    text-align: center;
+    left: -100%;
+    transition: all 0.5s;
+    align-items: center;
+    background-color:white;
+  }
+
+  .navbar-menu li {
+    border-bottom: 1px solid rgb(207, 198, 198);
+    margin: 5px;
+    z-index: 1;
+  }
+
+  nav li:hover {
+    background-color: rgb(245, 236, 236);
+  }
+
+  #check-menu:checked ~ ul {
+    left: 0;
+  } */
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0%;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
   }
 }
