@@ -22,7 +22,7 @@ html {
   align-items: center;
   flex-wrap: wrap;
   transition: 0.7s;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 nav {
@@ -256,6 +256,7 @@ button:focus {
 #products .title-products {
   width: 15rem;
   margin: 1rem;
+  cursor: pointer;
   /* border: 1px solid black; */
 }
 
@@ -326,6 +327,14 @@ button:focus {
   padding-top: 0.5rem;
   margin-top: 0;
   /* border: 1px solid black; */
+}
+
+.ocultar {
+  display: none;
+}
+
+.mostrar{
+  display: block;
 }
 
 /* ---------------------- STYLE SECTION FOOTER ---------------------- */

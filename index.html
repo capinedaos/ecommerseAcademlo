@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/Ecommerse/assets/style/estilos.css" />
+    <link rel="stylesheet" href="/assets/style/estilos.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -35,21 +35,21 @@
             onclick="document.documentElement.classList.toggle('dark-mode')"
           />
           <label for="check-moon" class="light-mode-button"
-            ><img src="/Ecommerse/assets/image/sol.svg" alt="" />
+            ><img src="/assets/image/sol.svg" alt="" />
           </label>
 
           <label for="check-moon" class="dark-mode-button"
-            ><img src="/Ecommerse/assets/image/luna.svg" alt="" />
+            ><img src="/assets/image/luna.svg" alt="" />
           </label>
 
           <input type="checkbox" id="check-shopping" />
           <label for="check-shopping" class="modal-button"
-            ><img src="/Ecommerse/assets/image/bolsa-de-la-compra.svg" alt=""
+            ><img src="/assets/image/bolsa-de-la-compra.svg" alt=""
           /></label>
 
           <input type="checkbox" id="check-menu" />
           <label for="check-menu" class="menu-button"
-            ><img src="/Ecommerse/assets/image/cuadricula.svg" alt=""
+            ><img src="/assets/image/cuadricula.svg" alt=""
           /></label>
 
           <!-- ---------------------- MODAL ---------------------- -->
@@ -60,7 +60,7 @@
                 <label for="check-shopping">X</label>
 
                 <div class="content-modal">
-                  <img src="/Ecommerse/assets/image/empty-cart.png" alt="" />
+                  <img src="/assets/image/empty-cart.png" alt="" />
                   <h2>Your cart is empty</h2>
                   <p>
                     You can add items to your cart by clicking on the "+" button
@@ -97,35 +97,35 @@
           </div>
         </div>
         <div class="img-home">
-          <img src="/Ecommerse/assets/image/home.png" alt="" />
+          <img src="/assets/image/home.png" alt="" />
         </div>
       </section>
       <!-- ---------------------- SECTION PRODUCTS ---------------------- -->
       <section id="products">
         <!-- ---------------------- HEADER PRODUCTS ---------------------- -->
         <div class="header-products">
-          <div class="title-products">
+          <div class="title-products" id="titleShowAll">
             <h2>Show All</h2>
             <p>show all products</p>
           </div>
 
           <div class="line"></div>
 
-          <div class="title-products">
+          <div class="title-products" id="titleHoodies">
             <h2>Hoodies</h2>
             <p>3 products</p>
           </div>
 
           <div class="line"></div>
 
-          <div class="title-products">
+          <div class="title-products" id="titleShirts">
             <h2>Shirts</h2>
             <p>4 products</p>
           </div>
 
           <div class="line"></div>
 
-          <div class="title-products">
+          <div class="title-products" id="titleSweatshirts">
             <h2>Sweatshirts</h2>
             <p>4 products</p>
           </div>
@@ -133,8 +133,8 @@
 
         <div class="content-target">
           <!-- ---------------------- TARGETS PRODUCTS ---------------------- -->
-          <div class="target" id="Hoodies">
-            <img src="/Ecommerse/assets/image/featured1.png" alt="" />
+          <div class="target" id="targetHoodies">
+            <img src="/assets/image/featured1.png" alt="" />
 
             <div class="data-target">
               <div class="txt-target">
@@ -144,8 +144,8 @@
               <h2>Hoodies</h2>
             </div>
           </div>
-          <div class="target" id="Shirts">
-            <img src="/Ecommerse/assets/image/featured2.png" alt="" />
+          <div class="target" id="targetShirts">
+            <img src="/assets/image/featured2.png" alt="" />
 
             <div class="data-target">
               <div class="txt-target">
@@ -155,8 +155,8 @@
               <h2>Shirts</h2>
             </div>
           </div>
-          <div class="target" id="Sweatshirts">
-            <img src="/Ecommerse/assets/image/featured3.png" alt="" />
+          <div class="target" id="targetSweatshirts">
+            <img src="/assets/image/featured3.png" alt="" />
 
             <div class="data-target">
               <div class="txt-target">
@@ -229,6 +229,6 @@
       src="https://kit.fontawesome.com/828f87dd8e.js"
       crossorigin="anonymous"
     ></script>
-    <script src="/Ecommerse/index.js"></script>
+    <script src="/index.js"></script>
   </body>
 </html>
