@@ -25,6 +25,10 @@ html {
   /* border: 1px solid black; */
 }
 
+.backgroundWhite {
+  background-color: white;
+}
+
 nav {
   position: relative;
   z-index: 1;
@@ -123,10 +127,12 @@ html.dark-mode img {
 .modal {
   position: fixed;
   top: 0;
-  left: 70%;
+  right: 0%;
   transition: all 500ms ease;
   opacity: 0;
   visibility: hidden;
+  /* border: 1px solid black; */
+  width: 30%;
 }
 
 .modal img {
@@ -135,6 +141,8 @@ html.dark-mode img {
 
 .content-modal {
   margin-top: 2rem;
+  border: 1px solid black;
+  display: none;
 }
 
 .content-modal p {
@@ -176,6 +184,38 @@ html.dark-mode img {
   right: 10px;
   font-size: 20px;
   cursor: pointer;
+}
+
+.shoppingList img {
+  width: 70px;
+  border: 1px solid rgba(128, 128, 128, 0.445);
+}
+
+.shoppingList {
+  display: flex;
+  /* border: 1px solid black; */
+  margin:1rem;
+}
+
+.shoppingList .sign {
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border: 1px solid rgba(128, 128, 128, 0.445);
+  margin: 5px 15px;
+}
+
+.addquantity {
+  display: flex;
+  align-items: center;
+}
+
+.red {
+  color: red;
+}
+
+.gray{
+  color: gray;
 }
 
 /* ---------------------- STYLE SECTION HOME ---------------------- */
@@ -290,6 +330,8 @@ button:focus {
 #products .target {
   margin-left: 5rem;
   margin-bottom: 1rem;
+  /* border: 1px solid black; */
+  position: relative;
 }
 
 #products img {
@@ -329,12 +371,26 @@ button:focus {
   /* border: 1px solid black; */
 }
 
-.ocultar {
-  display: none;
+#products button {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 0 10px #48529944;
+  font-size: 30px;
+  position: absolute;
+  cursor: pointer;
+  position: absolute;
+  left: 80%;
+  top: 72%;
 }
 
-.mostrar{
-  display: block;
+#products button:hover,
+button:focus {
+  background-color: #ff4f4f;
+  color: white;
+  transition: 0.5s;
 }
 
 /* ---------------------- STYLE SECTION FOOTER ---------------------- */
