@@ -1,9 +1,11 @@
 const cards = document.getElementById("cards");
 const items = document.getElementById("items");
 const footer = document.getElementById("footer");
+const empty = document.getElementById("empty");
 const templateCard = document.getElementById("template-card").content;
 const templateFooter = document.getElementById("template-footer").content;
 const templateCarrito = document.getElementById("template-carrito").content;
+const templateEmpty = document.getElementById("template-empty").content;
 const fragment = document.createDocumentFragment();
 let carrito = {};
 
@@ -13,6 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 cards.addEventListener("click", (e) => {
   addCarrito(e);
+});
+
+items.addEventListener("click", (e) => {
+  btnAccion(e);
 });
 
 const fechData = async () => {
@@ -58,6 +64,7 @@ const setCarrito = (objeto) => {
     title: objeto.querySelector("h2").textContent,
     precio: objeto.querySelector("span").textContent,
     stock: objeto.querySelector("p").textContent,
+    // img: objeto.querySelector("img").textContent,
     cantidad: 1,
   };
 
@@ -73,9 +80,9 @@ const pintarCarrito = () => {
   // console.log(carrito);
   items.innerHTML = "";
   Object.values(carrito).forEach((producto) => {
-    templateCarrito
-      .querySelector("img")
-      .setAttribute("src", producto.thumbnailUrl);
+    //  templateCarrito
+    //    .querySelector("img")
+    //    .setAttribute("src", producto.thumbnailUrl);
     templateCarrito.querySelector("h3").textContent = producto.title;
     templateCarrito.querySelector("p").textContent = producto.stock;
     templateCarrito.querySelector("span").textContent = producto.precio;
@@ -88,4 +95,44 @@ const pintarCarrito = () => {
     fragment.appendChild(clone);
   });
   items.appendChild(fragment);
+
+  pintarEmpty();
+};
+
+const pintarEmpty = () => {
+  empty.innerHTML = "";
+
+  const nCantidad = Object.values(carrito).reduce(
+    (acc, { cantidad }) => acc + cantidad,
+    0
+  );
+  const nPrecio = Object.values(carrito).reduce(
+    (acc, { cantidad, precio }) => acc + cantidad * precio,
+    0
+  );
+
+  templateFooter.getElementById("totalProductos").textContent = nCantidad;
+  templateFooter.getElementById("totalCompra").textContent = nPrecio;
+
+  const clone = templateFooter.cloneNode(true);
+  fragment.appendChild(clone);
+  footer.appendChild(fragment);
+
+  const btnVaciar = document.getElementById("vaciar-carrito");
+  btnVaciar.addEventListener("click", () => {
+    carrito = {};
+    pintarCarrito();
+  });
+};
+
+const btnAccion = (e) => {
+  // console.log(e.target);
+
+  if (e.target.classList.contains("btn-add")) {
+    // console.log(carrito[e.target.dataset.id]);
+    const producto = carrito[e.target.dataset.id].cantidad;
+    producto.cantidad++;
+    carrito[e.target.dataset.id] = { ...producto };
+    pintarCarrito();
+  }
 };

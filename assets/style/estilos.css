@@ -132,7 +132,7 @@ html.dark-mode img {
   opacity: 0;
   visibility: hidden;
   /* border: 1px solid black; */
-  width: 30%;
+  width: 50vh;
 }
 
 .modal img {
@@ -142,7 +142,7 @@ html.dark-mode img {
 .content-modal {
   margin-top: 2rem;
   /* border: 1px solid black; */
-  display: none;
+  /* display: none; */
 }
 
 .content-modal p {
@@ -244,7 +244,10 @@ html.dark-mode img {
   color: white;
 }
 
-
+.txtQuantity {
+  border: 2px solid rgb(219, 214, 214);
+  padding:3px;
+}
 
 /* ---------------------- STYLE SECTION HOME ---------------------- */
 

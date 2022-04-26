@@ -59,7 +59,7 @@
                 <h2>My Cart</h2>
                 <label for="check-shopping">X</label>
 
-                <div class="content-modal">
+                <div class="content-modal" id="empty">
                   <img src="/assets/image/empty-cart.png" alt="" />
                   <h2>Your cart is empty</h2>
                   <p>
@@ -68,7 +68,6 @@
                   </p>
                 </div>
                 <div class="shoppingList" id="items"></div>
-
                 <div class="shoppingfooter" id="footer"></div>
               </header>
             </div>
@@ -155,11 +154,11 @@
         <template id="template-carrito">
           <div class="shoppingList">
             <div class="txtQuantity gray">
-              <img src="" alt="" />
-              <h3>Shirts</h3>
-              <p>Stock:15</p>
-              <span class="red">$24.00 </span>
-              <p class="red subtotal">Subtotal: $24.00</p>
+              <!-- <img src="" alt="" /> -->
+              <h3>Titulo</h3>
+              <p>Stock</p>
+              <span class="red">Precio</span>
+              <p class="red subtotal">Subtotal</p>
               <div class="addquantity">
                 <div class="sign btn-remove">-</div>
                 <p>1 units</p>
@@ -171,12 +170,23 @@
 
         <template id="template-footer">
           <div class="shoppingfooter">
-            <p>Total Productos: 0</p>
-            <p>Total Compra: <span class="red"> $1500 </span></p>
-            <button>Vaciar todo</button>
+            <p id="totalProductos">Total Productos: 0</p>
+            <p id="totalCompra">
+              Total Compra: <span class="red"> $1500 </span>
+            </p>
+            <button id="vaciar-carrito">Vaciar todo</button>
           </div>
         </template>
       </section>
+
+      <template id="template-empty">
+        <img src="/assets/image/empty-cart.png" alt="" />
+        <h2>Your cart is empty</h2>
+        <p>
+          You can add items to your cart by clicking on the "+" button on the
+          product page.
+        </p>
+      </template>
     </main>
 
     <!-- ---------------------- FOOTER ---------------------- -->
