@@ -141,7 +141,7 @@ html.dark-mode img {
 
 .content-modal {
   margin-top: 2rem;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   display: none;
 }
 
@@ -187,14 +187,17 @@ html.dark-mode img {
 }
 
 .shoppingList img {
-  width: 70px;
+  width: 60px;
+  height: 70px;
   border: 1px solid rgba(128, 128, 128, 0.445);
+  border: 1px solid black;
 }
 
 .shoppingList {
   display: flex;
-  /* border: 1px solid black; */
-  margin:1rem;
+  margin: 1rem;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .shoppingList .sign {
@@ -203,6 +206,13 @@ html.dark-mode img {
   text-align: center;
   border: 1px solid rgba(128, 128, 128, 0.445);
   margin: 5px 15px;
+  background-color: red;
+  color: white;
+  font-size: 20px;
+}
+
+.fondo-azul {
+  background-color: rgb(41, 145, 174) !important;
 }
 
 .addquantity {
@@ -214,9 +224,27 @@ html.dark-mode img {
   color: red;
 }
 
-.gray{
+.gray {
   color: gray;
 }
+
+.shoppingfooter {
+  /* border: 1px solid black; */
+  color: gray;
+  line-height: 2rem;
+}
+
+.shoppingfooter button {
+  font-size: 20px;
+  padding: 5px;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff4f4f;
+  color: white;
+}
+
+
 
 /* ---------------------- STYLE SECTION HOME ---------------------- */
 
@@ -325,12 +353,12 @@ button:focus {
   justify-content: center;
   margin-top: 3rem;
   flex-wrap: wrap;
+  /* border: 1px solid black; */
 }
 
 #products .target {
   margin-left: 5rem;
   margin-bottom: 1rem;
-  /* border: 1px solid black; */
   position: relative;
 }
 
@@ -389,7 +417,6 @@ button:focus {
 #products button:hover,
 button:focus {
   background-color: #ff4f4f;
-  color: white;
   transition: 0.5s;
 }
 

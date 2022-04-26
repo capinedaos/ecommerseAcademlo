@@ -1,0 +1,23 @@
+[
+  {
+    "precio": 14,
+    "id": 1,
+    "stock": 10,
+    "title": "Hoodies",
+    "thumbnailUrl": "/assets/image/featured1.png"
+  },
+  {
+    "precio": 24,
+    "id": 2,
+    "stock": 15,
+    "title": "Shirts",
+    "thumbnailUrl": "/assets/image/featured2.png"
+  },
+  {
+    "precio": 14,
+    "id": 3,
+    "stock": 20,
+    "title": "Sweatshirts",
+    "thumbnailUrl": "/assets/image/featured3.png"
+  }
+]

@@ -67,20 +67,9 @@
                     on the product page.
                   </p>
                 </div>
-                <div class="shoppingList">
-                  <img src="/assets/image/featured1.png" alt="" />
-                  <div class="txtQuantity gray">
-                    <h3>Shirts</h3>
-                    <p>Stock:15 | <span class="red">$24.00 </span></p>
-                    <p class="red">Subtotal: $24.00</p>
+                <div class="shoppingList" id="items"></div>
 
-                    <div class="addquantity">
-                      <div class="sign">-</div>
-                      <p>1 units</p>
-                      <div class="sign">+</div>
-                    </div>
-                  </div>
-                </div>
+                <div class="shoppingfooter" id="footer"></div>
               </header>
             </div>
           </div>
@@ -145,42 +134,48 @@
           </div>
         </div>
 
-        <div class="content-target">
-          <!-- ---------------------- TARGETS PRODUCTS ---------------------- -->
-          <div class="target" id="targetHoodies">
-            <button>+</button>
-            <img src="/assets/image/featured1.png" alt="" />
+        <!-- -------- TARGETS PRODUCTS -------- -->
+        <div class="content-target" id="cards"></div>
+
+        <!-- -------- TEMPLATES  -------- -->
+        <template id="template-card">
+          <div class="target">
+            <button class="btn-add">+</button>
+            <img src="" alt="" />
             <div class="data-target">
               <div class="txt-target">
-                <span> $14.00 </span>
-                <p>| Stock: 10</p>
+                <span>precio</span>
+                <p>stock</p>
               </div>
-              <h2>Hoodies</h2>
+              <h2>titulo</h2>
             </div>
           </div>
-          <div class="target" id="targetShirts">
-            <button>+</button>
-            <img src="/assets/image/featured2.png" alt="" />
-            <div class="data-target">
-              <div class="txt-target">
-                <span> $24.00 </span>
-                <p>| Stock: 15</p>
+        </template>
+
+        <template id="template-carrito">
+          <div class="shoppingList">
+            <div class="txtQuantity gray">
+              <img src="" alt="" />
+              <h3>Shirts</h3>
+              <p>Stock:15</p>
+              <span class="red">$24.00 </span>
+              <p class="red subtotal">Subtotal: $24.00</p>
+              <div class="addquantity">
+                <div class="sign btn-remove">-</div>
+                <p>1 units</p>
+                <div class="sign btn-add">+</div>
               </div>
-              <h2>Shirts</h2>
             </div>
           </div>
-          <div class="target" id="targetSweatshirts">
-            <button>+</button>
-            <img src="/assets/image/featured3.png" alt="" />
-            <div class="data-target">
-              <div class="txt-target">
-                <span> $14.00 </span>
-                <p>| Stock: 20</p>
-              </div>
-              <h2>Sweatshirts</h2>
-            </div>
+        </template>
+
+        <template id="template-footer">
+          <div class="shoppingfooter">
+            <p>Total Productos: 0</p>
+            <p>Total Compra: <span class="red"> $1500 </span></p>
+            <button>Vaciar todo</button>
           </div>
-        </div>
+        </template>
       </section>
     </main>
 
@@ -243,6 +238,6 @@
       src="https://kit.fontawesome.com/828f87dd8e.js"
       crossorigin="anonymous"
     ></script>
-    <script src="/assets/js/main .js"></script>
+    <script src="/assets/js/app.js"></script>
   </body>
 </html>
